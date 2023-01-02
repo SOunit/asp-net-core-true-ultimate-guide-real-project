@@ -70,3 +70,12 @@
 - SomeValidation(200, ErrorMessage = "")
   - 1st argument is defined in constructor
   - ErrorMessage comes from parent class
+
+# custom validation for multiple inputs
+- validationContext
+  - ObjectInstance
+    - model class is instantiate as ObjectInstance
+```
+PropertyInfo? otherProperty = validationContext.ObjectType.GetProperty(OtherPropertyName);
+DateTime from_date = Convert.ToDateTime(otherProperty.GetValue(validationContext.ObjectInstance));
+```
