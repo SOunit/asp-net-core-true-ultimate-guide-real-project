@@ -55,3 +55,9 @@
   ```
   [Range(0, 999.99, ErrorMessage = "{0} should be between ${1} and ${2}")]
   ```
+
+- Regular Expression
+- EmailAddress
+- Phone
+- Compare
+- ValidateNever
