@@ -75,7 +75,7 @@
 - validationContext
   - ObjectInstance
     - model class is instantiate as ObjectInstance
-```
-PropertyInfo? otherProperty = validationContext.ObjectType.GetProperty(OtherPropertyName);
-DateTime from_date = Convert.ToDateTime(otherProperty.GetValue(validationContext.ObjectInstance));
-```
+  ```
+  PropertyInfo? otherProperty = validationContext.ObjectType.GetProperty(OtherPropertyName);
+  DateTime from_date = Convert.ToDateTime(otherProperty.GetValue(validationContext.ObjectInstance));
+  ```
