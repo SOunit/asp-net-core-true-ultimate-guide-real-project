@@ -61,3 +61,12 @@
 - Phone
 - Compare
 - ValidateNever
+
+# custom validation
+- create new class for validation
+- inherit `ValidationAttribute` class
+- override `IsValid` method return type is `ValidationResult`
+- ErrorMessage come from parent class `ValidationAttribute`
+- SomeValidation(200, ErrorMessage = "")
+  - 1st argument is defined in constructor
+  - ErrorMessage comes from parent class
