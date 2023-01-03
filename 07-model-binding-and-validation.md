@@ -79,3 +79,26 @@
   PropertyInfo? otherProperty = validationContext.ObjectType.GetProperty(OtherPropertyName);
   DateTime from_date = Convert.ToDateTime(otherProperty.GetValue(validationContext.ObjectInstance));
   ```
+- reflection?
+  - to get data using reflection in C#
+
+# IValidatableObject
+- for unique validation logic
+- can put validation logic to model class
+- do not need to be reusable, it's unique to the class
+- inherit `Validate` method
+- easy to access properties
+
+# bind
+- can select prop to bind
+  - add to action method
+- `BindNever` can skip binding
+  - add to model prop
+
+# FromBody
+- to receive JSON
+- json is enabled by default
+- if you want to use XML, then you have to enable XML
+  - image
+    - services.controller().xmlSomething()
+  - use `FromBody` to bind to model class
