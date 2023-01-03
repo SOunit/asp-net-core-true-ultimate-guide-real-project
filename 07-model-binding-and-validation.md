@@ -102,3 +102,12 @@
   - image
     - services.controller().xmlSomething()
   - use `FromBody` to bind to model class
+
+# Custom Model Binder
+- target 1 action
+- can use original binding logic
+- have to bind all props manually if you use CustomModelBinder
+
+# ModelBinderProviders
+- target 1 class
+  - means target all actions using the class
