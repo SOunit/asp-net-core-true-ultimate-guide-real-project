@@ -17,3 +17,8 @@
   ```
   @(expression)
   ```
+
+# shared view
+- for put common view to all controllers
+- for partial view
+- for layout view
