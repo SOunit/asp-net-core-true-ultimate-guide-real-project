@@ -50,4 +50,8 @@
     - email, unique to request
 
 # service scope
-- 
+- rootScope
+- requestScope
+- childScope
+  - IDisposable
+    - close db connection in dispose function
