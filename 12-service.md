@@ -33,3 +33,21 @@
     - browser request
 - Singleton
   - for entire application lifetime
+
+
+# when to use what
+- Singleton
+  - when service uses no state
+    - using cache
+    - using no memory
+    - having common data
+- Scoped
+  - db access with EntityFramework
+    - open db access per request
+- Transient
+  - for per controller data
+    - encrypt data
+    - email, unique to request
+
+# service scope
+- 
