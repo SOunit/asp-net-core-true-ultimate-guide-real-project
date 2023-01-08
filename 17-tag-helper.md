@@ -1,0 +1,62 @@
+# tag helper
+
+- shortcut for tags
+- generate html tags
+
+# asp-for
+
+- generate below
+  - type
+  - name
+  - id
+  - value
+
+# tag helpers for anchor and form
+
+- `asp-controller`
+- `asp-action`
+- `asp-route-x`
+- `asp-route`
+- `asp-area`
+
+# input / textarea / label
+
+- `asp-for`
+
+# select
+
+- `asp-for`
+- `api-items`
+
+# advantage of tag helpers
+
+- for binding
+- url generation
+  - with controller/action name pattern
+
+# for images
+
+- `asp-append-version`
+
+# for script tag
+
+- `asp-fallback-src`
+- `asp-fallback-test`
+
+# span
+
+- `asp-validation-for`
+
+# div
+
+- `asp-validation-summary`
+
+# asp-for tag-helper
+
+- generate below
+  - type
+  - name
+  - id
+  - value
+  - data-val-rule
+    - for frontend side validation
