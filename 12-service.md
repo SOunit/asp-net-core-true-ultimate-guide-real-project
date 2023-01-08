@@ -55,3 +55,29 @@
 - childScope
   - IDisposable
     - close db connection in dispose function
+
+# add service shortcut methods
+- AddTransient
+  - transient service
+  ```
+  builder.Services.AddTransient<IService, Service>();
+  ```
+- AddScoped
+- AddSingleton
+
+# View Injection
+- you can inject service class to View
+  - View is class file compiled to html
+  ```
+  @inject IService service;
+  ```
+
+# Best Practice of DI
+- global state in services
+  - avoid using static class to store common data
+  - can use `Singleton` only in simple scenario
+  - use `Distributed Cache` or `Redis` for complex scenario
+- request state in services
+  - avoid using scoped services to share data among services
+    - NOT thread-safe
+  - use `HttpContext.Items`
