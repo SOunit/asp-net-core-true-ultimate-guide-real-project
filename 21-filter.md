@@ -6,6 +6,10 @@
   - use `context.HttpContext.Items` 
   - to pass arguments from OnExecuting
   - to pass data via `ViewBag`
+- filter levels
+  - global level / application level
+  - controller level
+  - method level
 
 # filter
 
