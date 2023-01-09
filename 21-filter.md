@@ -1,3 +1,12 @@
+# summary
+
+- create filter class
+- connect to action
+- OnExecuted cannot get arguments
+  - use `context.HttpContext.Items` 
+  - to pass arguments from OnExecuting
+  - to pass data via `ViewBag`
+
 # filter
 
 - code block that executes before / after action method
@@ -72,9 +81,19 @@
   }
   ```
 
-# action filter points
+# arguments
 
-- create filter class
-- connect to action
-- OnExecuted cannot get arguments
-  - use `context.HttpContext.Items` to pass arguments from OnExecuting
+- can pass argument from controller to filter
+
+  ```
+  [TypeFilter(nameof(SomeActionFilter), Arguments = new Object[] {"arg1", "arg2"})]
+  ```
+
+  - add argument to constructor of action filter class
+
+  ```
+  public SomeActionFilter(string arg1, string arg2){
+    Arg1 = arg1;
+    Arg2 = arg2;
+  }
+  ```
