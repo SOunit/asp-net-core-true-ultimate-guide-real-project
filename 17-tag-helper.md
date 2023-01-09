@@ -82,7 +82,28 @@
   - jquery.validate.min.js
   - jquery.validate.unobtrusive.min.js
 
-
 # CDN / Content delivery network
+
 - benefit
   - browser cache
+
+# script tag-helper
+
+- asp-fallback-test
+  - check object exists
+- asp-fallback-src
+  - url to get source if test failed
+
+# script section
+
+- to load script in the bottom of body tag
+
+  ```
+  @section scripts{
+
+  }
+  ```
+
+  ```
+  @RenderSection("scripts", required: false);
+  ```
