@@ -107,3 +107,14 @@
   ```
   @RenderSection("scripts", required: false);
   ```
+
+# image tag helpers
+
+- browser cache prevent render updated image in server
+- image tag helper can help that situation
+  ```
+  asp-append-version="true"
+  ```
+- mechanism
+  - create hash of image
+  - when image is updated, hash changed, new file is loaded from server
