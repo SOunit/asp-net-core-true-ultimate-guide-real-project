@@ -3,11 +3,11 @@
 - create filter class
 - connect to action
 - OnExecuted cannot get arguments
-  - use `context.HttpContext.Items` 
+  - use `context.HttpContext.Items`
   - to pass arguments from OnExecuting
   - to pass data via `ViewBag`
 - filter levels
-  - global level / application level
+  - global level / project level
   - controller level
   - method level
 
@@ -100,4 +100,20 @@
     Arg1 = arg1;
     Arg2 = arg2;
   }
+  ```
+
+# global level filter
+
+- add filter to `Program.cs`
+  ```
+  builder.Services.AddControllerWithViews(options => {
+    options.Filters.Add(new SomeActionFilter(null,"arg1", "arg2"));
+  })
+  ```
+
+# class level filter
+
+- add annotation
+  ```
+  [TypeFilter(typeof(SomeActionFilter), Arguments = new object[]{"arg1", "arg2"})]
   ```
