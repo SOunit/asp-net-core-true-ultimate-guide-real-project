@@ -1,0 +1,4 @@
+- put
+  - for full update
+- patch
+  - for partial update
