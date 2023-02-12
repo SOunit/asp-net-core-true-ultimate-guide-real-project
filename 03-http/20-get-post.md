@@ -3,6 +3,7 @@
 - parse string to dictionary to use data easily
 - StringValues can allow same key
   - age=20&age=30 -> age = [20, 30]
+- this is base logic, but in actual product code, we use `model-binding` concept
 
 ```
 using System.IO;
