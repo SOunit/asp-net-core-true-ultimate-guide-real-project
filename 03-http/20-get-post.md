@@ -1,4 +1,8 @@
 - get body data from post request
+- body is stream, convert to string
+- parse string to dictionary to use data easily
+- StringValues can allow same key
+  - age=20&age=30 -> age = [20, 30]
 
 ```
 using System.IO;
@@ -29,7 +33,8 @@ app.Run(async (HttpContext context) => {
     Dictionary<string, StringValues> queryDict = Microsoft.AspNetCore.WebUtilities.QueryHelper.ParseQuery(body);
 
     if(queryDict.ContainsKey("firstName")){
-        string firstName = queryDict["firstName"];
+        string firstName = queryDict["firstName"][0];
+        await context.Response.WriteAsync(firstName);
     }
 });
 ```
