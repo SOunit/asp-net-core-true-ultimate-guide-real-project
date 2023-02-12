@@ -1,4 +1,4 @@
-can assign status code to response header
+- can assign status code to response header
 
 ```
 app.Run(async (HttpContext context)=>{
@@ -6,3 +6,4 @@ app.Run(async (HttpContext context)=>{
     context.Response.WriteAsync("Hello");
 })
 ```
+
