@@ -6,3 +6,16 @@ app.Run(async (HttpContext context) => {
     await context.Response.WriteAsync("Hello");
 })
 ```
+
+- common http response headers
+  - date
+    - date and time of response
+  - server
+    - name of the server
+  - content-type
+    - MIME type of response body
+  - content-length
+  - cache-control
+  - set-cookie
+  - access-control-allow-origin
+  - location
