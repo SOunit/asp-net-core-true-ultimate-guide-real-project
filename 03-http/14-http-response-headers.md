@@ -16,6 +16,8 @@ app.Run(async (HttpContext context) => {
     - MIME type of response body
   - content-length
   - cache-control
+    - save to cache memory in browser
+    - browser do not make request to server, instead get data from cache memory
   - set-cookie
   - access-control-allow-origin
   - location
