@@ -11,7 +11,11 @@
 ```
 app.UseEndpoints(endpoints => {
     endpoints.Map("files/{filename}.{extension}", async (context) => {
-        await context.Response.WriteAsync("In Files");
+
+        string? fileName = Convert.ToString(context.Request.RouteValue["filename"]);
+        string? extension = Convert.ToString(context.Request.RouteValue["extension"]);
+
+        await context.Response.WriteAsync($"In Files {filename} - {extension}");
     });
 })
 ```
