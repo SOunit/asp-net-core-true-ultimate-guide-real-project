@@ -1,6 +1,7 @@
 # custom route constraint class
 
 - good for reuse constraint
+- but it's rate to use constraint because validation and send request is better for users
 
 ```
 public class ClassName: IRouteConstraint {
