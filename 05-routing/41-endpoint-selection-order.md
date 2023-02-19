@@ -1,11 +1,19 @@
 # endpoint selection order
+
 - specific, higher priority
 
-- url template with more segments
-  - `a/b/c/d` > `a/b/c`
-- literal is higher than parameter
-  - `a/b` > `a/{parameter}`
-- with constraints
-  - `a/b:int` > `a/b`
-- catch param
-  - `a/b` > `a/**`
+1. url template with more segments
+
+- `a/b/c/d` > `a/b/c`
+
+2. literal is higher than parameter
+
+- `a/b` > `a/{parameter}`
+
+3. with constraints
+
+- `a/b:int` > `a/b`
+
+4. catch param
+
+- `a/b` > `a/**`
