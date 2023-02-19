@@ -1,0 +1,5 @@
+# constraint
+
+- decimal
+- long
+- guid
