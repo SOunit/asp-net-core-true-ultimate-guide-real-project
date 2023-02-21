@@ -17,7 +17,7 @@ var person = new Person(){
 };
 
 
-return JsonResult(person);
+return new JsonResult(person);
 ```
 
 # Json
