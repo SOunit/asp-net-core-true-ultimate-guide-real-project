@@ -40,3 +40,23 @@ public FileContentResult FileDownload(){
     return new FileContentResult(bytes, "application/pdf");
 }
 ```
+
+# shortcut
+
+- VirtualFileResult
+
+```
+return File("/sample.pdf", "application/pdf");
+```
+
+- PhysicalFileResult
+
+```
+return PhysicalFile(@"c:\aspnetcore\sample.pdf", "application/pdf");
+```
+
+- FileContentResult
+
+```
+return File(bytes, "application/pdf");
+```
